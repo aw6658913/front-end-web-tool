@@ -1,0 +1,122 @@
+{
+    "OrderManager": {
+        "id": 46,
+        "code": "OrderManager",
+        "parentCode": "",
+        "name": "Order Manager",
+        "url": "",
+        "type": "system",
+        "sort": 100,
+        "loadedOperations": false
+    },
+    "OrderList": {
+        "id": 47,
+        "code": "OrderList",
+        "parentCode": "OrderManager",
+        "name": "Order List",
+        "url": "/api/order/list",
+        "type": "menu",
+        "sort": 101,
+        "loadedOperations": false
+    },
+    "UscQuestionIndex": {
+        "id": 49,
+        "code": "UscQuestionIndex",
+        "parentCode": "",
+        "name": "Question-index",
+        "url": "",
+        "type": "system",
+        "sort": 200,
+        "loadedOperations": false
+    },
+    "UscSettingPrimaryCatalog": {
+        "id": 50,
+        "code": "UscSettingPrimaryCatalog",
+        "parentCode": "UscQuestionIndex",
+        "name": "Setting Primary Catalog",
+        "url": "/api/eomp/cs/customerserve/primary",
+        "type": "menu",
+        "sort": 201,
+        "loadedOperations": true
+    },
+    "UscSettingSecondaryCatalog": {
+        "id": 51,
+        "code": "UscSettingSecondaryCatalog",
+        "parentCode": "UscQuestionIndex",
+        "name": "Setting Secondary Catalog",
+        "url": "/api/eomp/cs/customerserve/secondary",
+        "type": "menu",
+        "sort": 202,
+        "loadedOperations": true
+    },
+    "UscSettingQuestionIndex": {
+        "id": 52,
+        "code": "UscSettingQuestionIndex",
+        "parentCode": "UscQuestionIndex",
+        "name": "Setting Question-index",
+        "url": "/api/eomp/cs/customerserve/question",
+        "type": "menu",
+        "sort": 203,
+        "loadedOperations": true
+    },
+    "ConsumerRecommendManagement": {
+        "id": 53,
+        "code": "ConsumerRecommendManagement",
+        "parentCode": "",
+        "name": "RecommendManagement",
+        "url": "",
+        "type": "system",
+        "sort": 300,
+        "loadedOperations": true
+    },
+    "ConsumerHomeBannerManagement": {
+        "id": 54,
+        "code": "ConsumerHomeBannerManagement",
+        "parentCode": "ConsumerRecommendManagement",
+        "name": "HomeBannerManagement",
+        "url": "/api/eomp/uadmin/RecommendManagement/HomeManagement/BannerManagement",
+        "type": "menu",
+        "sort": 301,
+        "loadedOperations": false
+    },
+    "ConsumerUserManagement": {
+        "id": 55,
+        "code": "ConsumerUserManagement",
+        "parentCode": "",
+        "name": "UserManagement",
+        "url": "/api/eomp/uadmin/UserManagement",
+        "type": "system",
+        "sort": 303,
+        "loadedOperations": false
+    },
+    "ConsumerMessageManagement": {
+        "id": 56,
+        "code": "ConsumerMessageManagement",
+        "parentCode": "",
+        "name": "MessageManagement",
+        "url": "/api/eomp/uadmin/MessageManagement",
+        "type": "system",
+        "sort": 304,
+        "loadedOperations": false
+    },
+    "ConsumerMessageManagementMessageManagement": {
+        "id": 57,
+        "code": "ConsumerMessageManagementMessageManagement",
+        "parentCode": "ConsumerMessageManagement",
+        "name": "MessageManagement",
+        "url": "",
+        "type": "menu",
+        "sort": 305,
+        "loadedOperations": true
+    },
+    "ConsumerMessageManagementMessageTypeManagement": {
+        "id": 58,
+        "code": "ConsumerMessageManagementMessageTypeManagement",
+        "parentCode": "ConsumerMessageManagement",
+        "name": "MessageTypeManagement",
+        "url": "/api/eomp/uadmin/MessageManagement",
+        "type": "menu",
+        "sort": 206,
+        "loadedOperations": true
+    }
+}

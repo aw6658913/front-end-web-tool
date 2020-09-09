@@ -1,0 +1,68 @@
+@import '~antd/es/style/themes/default.less';
+
+.welcome {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+@welcome-color: #f49f30;
+
+.logoWrapper {
+    display: inline-block;
+    margin-right: 4em;
+    // margin-top: 1em;
+    // padding-top: 1em;
+    color: @welcome-color;
+    font-weight: bold;
+    font-size: 30px;
+    transform: translateY(1.8em);
+}
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.titleDivider {
+    margin-bottom: 1em !important;
+    color: @primary-color !important;
+    font-size: @heading-1-size !important;
+}
+
+.text {
+    position: relative;
+    display: inline-block;
+    font-size: 20px !important;
+    text-align: left;
+}
+.text::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -2.5em;
+    display: block;
+    width: 0;
+    border-left: 0.1em solid @welcome-color;
+    opacity: 0.3;
+    content: '';
+}
+.text,
+.logoWrapper,
+.text span,
+.text strong,
+.text .smileIcon {
+    vertical-align: middle;
+}
+.text span {
+    margin-left: 0.5em;
+    font-size: 1.25em;
+    opacity: 0.5;
+}
+.text strong {
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    color: @primary-4 !important;
+    font-size: 1.55em;
+    text-align: center;
+    border: 1px solid;
+}

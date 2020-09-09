@@ -1,0 +1,138 @@
+@import '~antd/es/style/themes/default.less';
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+.colorWeak {
+    filter: invert(80%);
+}
+
+.ant-layout {
+    min-width: 1140px;
+    height: auto !important;
+    min-height: 100vh;
+}
+
+canvas {
+    display: block;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+    .ant-table {
+        width: 100%;
+        overflow-x: auto;
+        &-thead > tr,
+        &-tbody > tr {
+            > th,
+            > td {
+                white-space: pre;
+                > span {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.table-operate {
+    a:not(:last-child) {
+        padding-right: 8px;
+        &::after {
+            display: inline-block;
+            height: 10px;
+            margin-left: 8px;
+            border-right: 1px solid rgba(0, 0, 0, 0.65);
+            content: '';
+        }
+    }
+}
+.ant-cascader-menu-item-expand {
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.ant-cascader-menu-item {
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.ant-upload-list-picture-card .ant-upload-list-item {
+    overflow: hidden;
+    > div {
+        height: 100%;
+    }
+}
+
+:global {
+    .order-orange {
+        color: #ff7920;
+    }
+    .order-green {
+        color: #158a15;
+    }
+    .order-red {
+        color: #de350b;
+    }
+    @media screen and (max-width: 766px) {
+        .ant-pro-sider-menu {
+            position: fixed !important;
+        }
+    }
+    .doubleRow {
+        .ant-form-item-label {
+            .ant-form-item-required {
+                &::before {
+                    position: relative;
+                    top: -12px;
+                    left: -6px;
+                }
+            }
+            label::after {
+                position: relative;
+                top: -13px;
+                left: -7px;
+            }
+        }
+    }
+    .long-steps {
+        .ant-steps-item {
+            position: relative;
+            display: inline-block;
+            width: 20%;
+            min-width: 200px;
+            max-width: 20%;
+            overflow: hidden;
+            vertical-align: top;
+        }
+    }
+
+    .ant-steps {
+        flex-wrap: wrap;
+    }
+    .ant-popover-content {
+        min-width: 165px;
+    }
+    .ant-pro-basicLayout-content {
+        min-height: auto !important;
+    }
+}
+.ant-steps-item {
+    margin: 10px 0;
+}
