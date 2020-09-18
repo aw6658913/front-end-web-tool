@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import { Pagination } from 'antd';
 import { formatMessage } from 'umi-plugin-react/locale';
 
-const VVPagination = forwardRef((props: any, ref: any) => {
+const DDPagination = forwardRef((props: any, ref: any) => {
     const { pageSize = 10, changePageSize = () => {}, changeCurrent = () => {} } = props;
 
     const PaginationProp = {
@@ -24,4 +24,4 @@ const VVPagination = forwardRef((props: any, ref: any) => {
     return <Pagination {...PaginationProp} ref={ref} />;
 });
 
-export default VVPagination;
+export default DDPagination;
