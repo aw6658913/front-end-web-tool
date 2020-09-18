@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Input } from 'antd';
 
-const VVInput = forwardRef((props: any, ref: any) => {
+const DDInput = forwardRef((props: any, ref: any) => {
     const cnReg = /([\u4e00-\u9fa5]|[\u3000-\u303F]|[\uFF00-\uFF60])/g;
     const { vvMaxLength, ...inputProps } = props;
 
@@ -52,4 +52,4 @@ const VVInput = forwardRef((props: any, ref: any) => {
     return <Input {...inputProps} ref={ref} onInput={onInput} onKeyUp={onKeyUp} />;
 });
 
-export default VVInput;
+export default DDInput;
