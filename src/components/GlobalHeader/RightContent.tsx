@@ -3,7 +3,6 @@ import { connect } from 'dva';
 import { ConnectProps, ConnectState } from '@/models/connect';
 
 import Avatar from './AvatarDropdown';
-import SelectLang from '../SelectLang';
 import styles from './index.less';
 
 export type SiderTheme = 'light' | 'dark';
@@ -23,7 +22,7 @@ const GlobalHeaderRight: React.SFC<GlobalHeaderRightProps> = props => {
     return (
         <div className={className}>
             <Avatar props={() => {}} />
-            <SelectLang className={styles.action} />
+            {/* <SelectLang className={styles.action} /> */}
         </div>
     );
 };
