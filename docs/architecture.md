@@ -35,8 +35,9 @@
     |   |-- components/                      // 应用级通用组件
     |   |-- e2e/                             // 端到端测试文件夹
     |   |-- layouts/                         // 应用级通用组件 - 布局
-    |   |   |-- BasicLayout.tsx
+    |   |   |-- BasicLayout.tsx              // 默认布局，单开菜布局
     |   |   |-- BlankLayout.tsx
+    |   |   |-- Layout.tsx                   // 多标签菜单布局，支持多开菜单
     |   |   |-- SecurityLayout.tsx
     |   |   |-- UserLayout.tsx
     |   |
