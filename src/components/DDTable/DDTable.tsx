@@ -3,7 +3,7 @@ import { Table } from 'antd';
 import { formatMessage } from 'umi-plugin-react/locale';
 import DDPagination from '../DDPagination';
 
-const VVTable = forwardRef((props: any, ref: any) => {
+const DDTable = forwardRef((props: any, ref: any) => {
     const {
         dataSource = [],
         columns = [],
@@ -49,4 +49,4 @@ const VVTable = forwardRef((props: any, ref: any) => {
     );
 });
 
-export default VVTable;
+export default DDTable;
