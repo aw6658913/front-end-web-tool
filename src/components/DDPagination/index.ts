@@ -1,3 +1,3 @@
-import VVPagination from './VVPagination';
+import DDPagination from './DDPagination';
 
-export default VVPagination;
+export default DDPagination;
