@@ -102,3 +102,23 @@ export function trimObj(targetObj = {}) {
 export function numberThousandSeparator(number = 0) {
     return number.toLocaleString();
 }
+
+export function getComponent(name: string, route: any) {
+    let result = '';
+    const filterArr = (list: any) => {
+        if (list && list.length) {
+            // eslint-disable-next-line no-plusplus
+            for (let i = 0; i < list.length; i++) {
+                const item = list[i];
+                if (item.name === name) {
+                    result = item;
+                    break;
+                } else if (item.routes) {
+                    filterArr(item.routes);
+                }
+            }
+        }
+    };
+    filterArr(route.routes);
+    return result;
+}
