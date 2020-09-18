@@ -1,3 +1,3 @@
-import VVUpload from './VVUpload';
+import DDpload from './DDUpload';
 
-export default VVUpload;
+export default DDUpload;
