@@ -139,14 +139,34 @@ export default {
                     routes: [
                         {
                             path: '/',
-                            redirect: '/welcome'
+                            redirect: '/workbench'
                         },
                         {
-                            path: '/welcome',
-                            name: 'welcome',
-                            icon: 'smile',
-                            component: './Welcome'
-                            // sort: 9999
+                            path: '/workbench',
+                            name: 'workbench',
+                            title: '工作台',
+                            component: './workbench',
+                            authority: ''
+                        },
+                        {
+                            path: '/home',
+                            name: 'home',
+                            title: '个人中心',
+                            icon: 'setting',
+                            authority: '',
+                            routes: [
+                                {
+                                    path: 'welcome',
+                                    name: 'welcome',
+                                    title: '欢迎',
+                                    icon: 'smile',
+                                    component: './Welcome'
+                                    // sort: 9999
+                                },
+                                {
+                                    component: './exception/404'
+                                }
+                            ]
                         },
                         {
                             component: './exception/404'
