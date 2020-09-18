@@ -1,3 +1,3 @@
-import VVInput from './VVInput';
+import DDInput from './DDInput';
 
-export default VVInput;
+export default DDInput;
