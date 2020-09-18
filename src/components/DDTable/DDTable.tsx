@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Table } from 'antd';
 import { formatMessage } from 'umi-plugin-react/locale';
-import VVPagination from '../VVPagination';
+import DDPagination from '../DDPagination';
 
 const VVTable = forwardRef((props: any, ref: any) => {
     const {
@@ -42,7 +42,7 @@ const VVTable = forwardRef((props: any, ref: any) => {
             />
             {isPag && !isShowTablePag && dataSource && dataSource.length ? (
                 <div style={{ marginTop: 10, textAlign: 'right' }}>
-                    <VVPagination {...pagination} />
+                    <DDPagination {...pagination} />
                 </div>
             ) : null}
         </div>
