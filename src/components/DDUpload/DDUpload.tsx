@@ -7,7 +7,7 @@ import * as qiniu from 'qiniu-js';
 import ComUpload from './ComUpload';
 import { request } from './request';
 
-const VVUpload = forwardRef((props: any, ref: any) => {
+const DDUpload = forwardRef((props: any, ref: any) => {
     /**
      * props参数说明：
      * fileList: 上传文件列表
@@ -302,4 +302,4 @@ const VVUpload = forwardRef((props: any, ref: any) => {
     );
 });
 
-export default VVUpload;
+export default DDUpload;
