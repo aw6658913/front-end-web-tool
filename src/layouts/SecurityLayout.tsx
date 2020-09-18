@@ -37,8 +37,7 @@ class SecurityLayout extends React.Component<SecurityLayoutProps, SecurityLayout
         const { dispatch, route = { routes: [] }, location = { pathname: '' } } = this.props;
         const { routes } = route;
         const { pathname = '' } = location;
-
-        if (dispatch && !((pathname === '/' || pathname === '/eomp/core') && !getLoginStates('user'))) {
+        if (dispatch && !(pathname === '/' && !getLoginStates('token'))) {
             dispatch({
                 type: this.isLoginPathname() ? 'user/fetchCurrentFromCookie' : 'user/fetchCurrent',
                 callback: () => {
@@ -56,13 +55,6 @@ class SecurityLayout extends React.Component<SecurityLayoutProps, SecurityLayout
                             payload: {
                                 routeData: routes,
                                 pathname
-                            },
-                            callback: (obj: { [x: string]: any }) => {
-                                if (obj && obj['/ordercenter/exceptions']) {
-                                    dispatch({
-                                        type: 'global/fetchNumber'
-                                    });
-                                }
                             }
                         });
                     }
@@ -86,9 +78,9 @@ class SecurityLayout extends React.Component<SecurityLayoutProps, SecurityLayout
     };
 
     isLogin = (): boolean => {
-        const { currentUser } = this.props;
-        const isLogin = currentUser && currentUser.userId;
-
+        // const { currentUser } = this.props;
+        // const isLogin = currentUser && currentUser.userId;
+        const isLogin = true;
         return !!isLogin;
     };
 
@@ -103,7 +95,7 @@ class SecurityLayout extends React.Component<SecurityLayoutProps, SecurityLayout
 
         const isLoginPathname: boolean = this.isLoginPathname();
 
-        if (!isLogin && isLoginPathname) {
+        if (!isLogin) {
             return children;
         }
 
