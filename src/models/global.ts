@@ -12,10 +12,17 @@ export interface NoticeItem extends NoticeIconData {
     status: string;
 }
 
+export interface tabItem {
+    key: string;
+    title: string;
+    content: any;
+}
+
 export interface GlobalModelState {
     collapsed: boolean;
     notices: NoticeItem[];
     exceptionNumber: Number;
+    tabList: tabItem[];
 }
 
 export interface GlobalModelType {
@@ -28,10 +35,7 @@ export interface GlobalModelType {
         fetchNumber: Effect;
     };
     reducers: {
-        changeLayoutCollapsed: Reducer<GlobalModelState>;
-        saveNotices: Reducer<GlobalModelState>;
-        saveClearedNotices: Reducer<GlobalModelState>;
-        saveNumber: Reducer<GlobalModelState>;
+        saveTabList: Reducer<GlobalModelState>;
     };
     subscriptions: { setup: Subscription };
 }
@@ -42,6 +46,7 @@ const GlobalModel: GlobalModelType = {
     state: {
         collapsed: false,
         notices: [],
+        tabList: [],
         exceptionNumber: 0
     },
 
@@ -119,31 +124,10 @@ const GlobalModel: GlobalModelType = {
     },
 
     reducers: {
-        changeLayoutCollapsed(state = { notices: [], collapsed: true }, { payload }): GlobalModelState {
+        saveTabList(state, { payload }): GlobalModelState {
             return {
                 ...state,
-                collapsed: payload
-            };
-        },
-        saveNotices(state, { payload }): GlobalModelState {
-            return {
-                collapsed: false,
-                ...state,
-                notices: payload
-            };
-        },
-        saveClearedNotices(state = { notices: [], collapsed: true }, { payload }): GlobalModelState {
-            return {
-                collapsed: false,
-                ...state,
-                notices: state.notices.filter((item): boolean => item.type !== payload)
-            };
-        },
-        saveNumber(state, { payload }): GlobalModelState {
-            return {
-                collapsed: false,
-                ...state,
-                exceptionNumber: payload
+                tabList: payload
             };
         }
     },
