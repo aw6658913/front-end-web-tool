@@ -1,3 +1,3 @@
-import VVTable from './VVTable';
+import DDTable from './DDTable';
 
-export default VVTable;
+export default DDTable;
