@@ -24,6 +24,7 @@ const MainLayout = ({ dispatch, global, ...props }: any) => {
         setCollapsed(!collapsed);
     };
 
+    // 渲染菜单
     const rendMenu = (menuList = []) =>
         menuList.map((item: any) => {
             if (item.component && !item.routes && item.path) {
@@ -86,7 +87,7 @@ const MainLayout = ({ dispatch, global, ...props }: any) => {
         setSelectKeys([tabKey]);
         const currentTab: any = getComponent(tabKey, routeList) || {};
         console.log(routeList.routes);
-        router.push(currentTab.path);
+        router.replace(currentTab.path);
     };
 
     // 删除tab
